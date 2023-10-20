@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /*for 1rem = 10px*/
+}
+
+.header {
+    background-color: transparent;
+    color: rgb(15, 15, 15);
+    padding: 0 5rem;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .logo {
+    height: 3rem;
+    font-size: 3rem;
+    overflow-y: visible;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.navbar-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    padding: 1rem 4rem;
+    border-radius: 10%;
+    transition: all 0.6s;
+
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    background-color: rgb(247, 247, 247);
+    transition: all 0.2s;
+    color: rgb(90, 79, 79);
+}
+
+.mobile-navbar-button {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mobile-navbar-icon {
+    font-size: 2rem;
+}
+
+@media (max-width: 980px) {
+    .mobile-navbar-button {
+        display: block;
+        z-index: 999;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .navbar {
+        background-color: #eeeeee;
+        width: 80vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* transition effect */
+        transform: translateX(100%);
+        transition: all 0.3s ease-out;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        height: 60%;
+        font-size: 3.4rem;
+    }
+
+    .navbar-link {
+        padding: 1rem 8rem;
+    }
+
+    .active .navbar {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+
+    }
+
+    .active .mobile-navbar-button {
+        display: block;
+    }
+
+    .active .mobile-navbar-button .mobile-navbar-icon {
+        display: block;
+    }
+
+}
+
+#content {
+    display: flex;
+    margin: 5vh 0;
+    padding: 0 6rem;
+    justify-content: space-around;
+    border: 3px black;
+
+}
+
+#content img {
+    border-radius: 0.4rem;
+    max-width: 20vw;
+    max-height: 84vh;
+    height: auto;
+}
+
+.left-section {
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+}
+
+.right-section {
+    width: 40vw;
+    padding: 4rem 4rem;
+    font-size: 2.6rem;
+}

@@ -1,46 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Thakur | Data Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<header class="header ">
-    <img src="/pics" alt="Ajay" class="logo">
-    <nav class="navbar">
-        <ul class="navbar-list">
-            <li><a class="navbar-link" onclick="classRemove()" href="#content">
-                    About
-                </a></li>
-            <li><a class="navbar-link" href="#">
-                    Project
-                </a></li>
-            <li><a class="navbar-link" href="#">
-                    contact
-                </a></li>
-        </ul>
-    </nav>
-    <div class="mobile-navbar-button">
-        <i class="fa-solid fa-bars mobile-navbar-icon"></i>
-    </div>
-
-</header>
-<section id="content">
-    <div class="left-section"><img src="" alt="My pic"></div>
-    <div class="right-section">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde neque expedita itaque
-        aperiam nostrum sed fugiat tempora, cum rerum beatae a molestiae culpa libero impedit repudiandae fuga!
-        Perferendis, in laborum.</div>
-</section>
-</div>
-<script src="index.js"></script>
-
 <body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile">
+                    <img src="my_img.jpg" alt="Ajay Thakur" class="profile-img">
+                    <div class="profile-text">
+                        <h1>Ajay Thakur</h1>
+                        <p>Data Analyst | SQL | Python | Power BI</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Nehru Colony, Rohtak, Haryana 124001</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>95883-63120</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ajaythakre@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate-on-scroll">Profile Summary</h2>
+            </div>
+            <div class="about-content">
+                <div class="animate-on-scroll" data-delay="0.2s">
+                    <p>Data Analyst with expertise in SQL, Python (Pandas), and Power BI, delivering actionable insights through data cleaning, statistical analysis, and interactive dashboards. Proven ability to drive business decisions with a problem-solving approach.</p>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Technical Skills</h3>
+                    <div class="skills">
+                        <span class="skill-item">Python (Pandas, NumPy)</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Tableau</span>
+                        <span class="skill-item">Excel</span>
+                        <span class="skill-item">Data Cleaning</span>
+                        <span class="skill-item">Web Scraping</span>
+                        <span class="skill-item">Statistical Analysis</span>
+                        <span class="skill-item">Data Visualization</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Node.js</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll" data-delay="0.4s">
+                    <h3>Trainings & Certificates</h3>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Completed a 26-week course in Data Science and Machine Learning from GeeksforGeeks (GFG)</li>
+                        <li>Gained hands-on experience in data analysis, visualization, and building predictive models</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate-on-scroll">Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" data-delay="0.2s">
+                    <div class="timeline-date">Sep 2023 – 2024</div>
+                    <h3>Master of Computer Applications</h3>
+                    <p>Chandigarh University, Chandigarh (8.5 CGPA)</p>
+                </div>
+                <div class="timeline-item animate-on-scroll" data-delay="0.3s">
+                    <div class="timeline-date">Feb 2019 – Feb 2021</div>
+                    <h3>Bachelor of Science in Engineering</h3>
+                    <p>All India Jat Heroes Memorial College, Rohtak, Haryana (62.4%)</p>
+                </div>
+                <div class="timeline-item animate-on-scroll" data-delay="0.4s">
+                    <div class="timeline-date">Jul 2017 - April 2018</div>
+                    <h3>Intermediate (Physics-Chemistry-Mathematics)</h3>
+                    <p>Gaur Brahaman Centeral Sr. Sec. School, Rohtak, Haryana (67.2%)</p>
+                </div>
+                <div class="timeline-item animate-on-scroll" data-delay="0.5s">
+                    <div class="timeline-date">July 2015 – May 2016</div>
+                    <h3>Matriculation</h3>
+                    <p>Sarvodya High School, Rohtak, Haryana (80.6%)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate-on-scroll">Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" data-delay="0.2s">
+                    <div class="timeline-date">June 2024 – Present</div>
+                    <h3>Freelance Data Analyst</h3>
+                    <p>Self-Employed, New Delhi, India</p>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        <li>Performed data cleaning, outlier detection, and statistical analysis on client datasets using Python (Pandas) and Excel, improving data quality for downstream reporting.</li>
+                        <li>Designed and delivered Power BI dashboards to visualize trends and KPIs for small businesses, enabling data-driven decisions (e.g., sales tracking, customer insights).</li>
+                        <li>Scraped and processed web data using Python and tools like Brightdata, supporting ad-hoc analysis projects for clients in various domains.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate-on-scroll">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll" data-delay="0.2s">
+                    <img src="https://via.placeholder.com/400x200?text=Sugarcane+Production" alt="Sugarcane Production Project" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Sugarcane Production Analysis</h3>
+                        <p>Analyzed sugarcane production data with graphs (Data Cleaning, Checking Outliers, Univariate and Bivariate analysis, correlation).</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-delay="0.3s">
+                    <img src="https://via.placeholder.com/400x200?text=Sales+Insights" alt="Sales Insights" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Sales Insights (Brick and motor business)</h3>
+                        <p>Designed a Power BI dashboard to understand AtliQ hardware goods sales trend, helping increase revenue by 7% in next quarter.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Data Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ajaythakur958/sales-insights" class="btn btn-primary">GitHub</a>
+                            <a href="#" class="btn btn-outline">View Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-delay="0.4s">
+                    <img src="https://via.placeholder.com/400x200?text=T20+Cricket" alt="T20 Cricket Analytics" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">T20 World Cup Cricket Data Analytics</h3>
+                        <p>Created a Power BI report to identify top 11 players for a T20 cricket team by analyzing data from espncricinfo.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Web Scraping</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ajaythakur958/t20-cricket-analytics" class="btn btn-primary">GitHub</a>
+                            <a href="#" class="btn btn-outline">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-delay="0.5s">
+                    <img src="https://via.placeholder.com/400x200?text=Revenue+Insights" alt="Revenue Insights" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Revenue Insights (Hospitality Domain)</h3>
+                        <p>Created a Power BI dashboard to analyze revenue loss for Atliq Grands, helping regain 20% market share.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ajaythakur958/revenue-insights" class="btn btn-primary">GitHub</a>
+                            <a href="#" class="btn btn-outline">View Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-delay="0.6s">
+                    <img src="https://via.placeholder.com/400x200?text=HR+Analytics" alt="HR Analytics" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">HR Data Analytics</h3>
+                        <p>Designed a Power BI dashboard to track employee data for HR team, saving 3-4 hours of daily work.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">HR Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ajaythakur958/hr-analytics" class="btn btn-primary">GitHub</a>
+                            <a href="#" class="btn btn-outline">View Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-delay="0.7s">
+                    <img src="https://via.placeholder.com/400x200?text=Inventory+App" alt="Inventory App" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Inventory App</h3>
+                        <p>Inventory management app using Node.js with login/logout features and product management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ajaythakur958/inventory-app" class="btn btn-primary">GitHub</a>
+                            <a href="#" class="btn btn-outline">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate-on-scroll">Get In Touch</h2>
+            </div>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;" class="animate-on-scroll" data-delay="0.2s">
+                <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:ajaythakre@gmail.com" class="btn btn-primary" style="margin-right: 1rem;">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="tel:9588363120" class="btn btn-outline">
+                        <i class="fas fa-phone"></i> Call Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ajay-thakur" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ajaythakur958" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="mailto:ajaythakre@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 Ajay Thakur. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>

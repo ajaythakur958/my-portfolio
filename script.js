@@ -80,3 +80,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const themeOptions = document.querySelectorAll('.theme-option');
+  const html = document.documentElement;
+  
+  // Set initial theme
+  const savedTheme = localStorage.getItem('theme') || 'blue';
+  html.setAttribute('data-theme', savedTheme);
+  
+  // Activate current theme button
+  document.querySelector(`.theme-option[data-theme="${savedTheme}"]`).classList.add('active');
+  
+  // Theme switcher functionality
+  themeOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const theme = this.getAttribute('data-theme');
+      
+      // Update theme
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      
+      // Update active button
+      themeOptions.forEach(opt => opt.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});

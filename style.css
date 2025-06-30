@@ -1,11 +1,109 @@
 :root {
-    --primary: #2c3e50;
-    --secondary: #3498db;
-    --light: #ecf0f1;
-    --dark: #2c3e50;
-    --accent: #e74c3c;
+  /* Base Theme - Blue */
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
+  --accent: #e74c3c;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --nav-bg: var(--secondary);
+  --footer-bg: var(--dark);
+  --skill-bg: var(--secondary);
+  --timeline-color: var(--secondary);
+  --btn-hover: #2980b9;
+  --tech-tag-bg: var(--light);
+  --skill-hover: #2980b9;
+  --heading-color: #2c3e50; /* Blue theme */
+  --card-heading-color: var(--heading-color);
+}
+/* Alternate Theme - Orange */
+[data-theme="orange"] {
+  --primary: #2c2c2c;
+  --secondary: #dd6236;
+  --light: #ede4d3;
+  --dark: #000000;
+  --accent: #8f1e00;
+  --text-color: #000;
+  --card-bg: #F7EEDD;
+  --card-border: #c4bcab;
+  --nav-bg: var(--primary);
+  --footer-bg: var(--dark);
+  --skill-bg: var(--secondary);
+  --timeline-color: var(--secondary);
+  --btn-hover: #d1542f;
+  --tech-tag-bg: var(--light);
+  --skill-hover: #d1542f;
+  --heading-color: #2c2c2c;
+  
 }
 
+/* Alternate Theme - Dark */
+[data-theme="dark"] {
+  --primary: #1a1a1a;
+  --secondary: #5dade2;
+  --light: #2c2c2c;
+  --dark: #121212;
+  --accent: #ff7f50;
+  --text-color: #f5f5f5;
+  --card-bg: #2c2c2c;
+  --card-border: #444;
+  --nav-bg: var(--primary);
+  --footer-bg: var(--dark);
+  --skill-bg: var(--secondary);
+  --timeline-color: var(--secondary);
+  --btn-hover: #4a9bd1;
+  --tech-tag-bg: #444;
+  --skill-hover: #4a9bd1;
+  --heading-color: #f5f5f5;
+}
+/* Theme Switcher UI */
+.theme-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.theme-options {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.theme-option:hover {
+  transform: scale(1.1);
+}
+
+.theme-option.active {
+  border-color: var(--accent);
+}
+
+/* Color Presets */
+.theme-option[data-theme="blue"] {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #ecf0f1 100%);
+}
+
+.theme-option[data-theme="orange"] {
+  background: linear-gradient(135deg, #2c2c2c 0%, #dd6236 50%, #ede4d3 100%);
+}
+
+.theme-option[data-theme="dark"] {
+  background: linear-gradient(135deg, #1a1a1a 0%, #5dade2 50%, #2c2c2c 100%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +112,10 @@
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
+  background-color: var(--light);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
 
 .container {
@@ -86,7 +185,7 @@ header {
 }
 
 nav {
-    background-color: var(--secondary);
+    background-color: var(--nav-bg);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -171,7 +270,7 @@ section {
 }
 
 .skill-item {
-    background-color: var(--secondary);
+    background-color: var(--skill-bg);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -181,7 +280,7 @@ section {
 
 .skill-item:hover {
     transform: translateY(-3px);
-    background-color: #2980b9;
+    background-color: var(--skill-hover);
 }
 
 .education-item, .experience-item {
@@ -208,7 +307,7 @@ section {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: var(--secondary);
+    background-color: var(--timeline-color);
 }
 
 .timeline-item {
@@ -250,7 +349,8 @@ section {
 }
 
 .project-card {
-    background-color: white;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -288,7 +388,8 @@ section {
 .project-title {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: var(--primary);
+    color: var(--card-heading-color, var(--heading-color));
+    transition: color 0.3s ease;
 }
 
 .project-tech {
@@ -299,7 +400,7 @@ section {
 }
 
 .tech-tag {
-    background-color: var(--light);
+    background-color: var(--tech-tag-bg);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -350,7 +451,7 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #2980b9;
+    background-color: var(--btn-hover);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4);
 }
@@ -368,7 +469,7 @@ section {
 }
 
 footer {
-    background-color: var(--dark);
+    background-color: var(--footer-bg);
     color: white;
     text-align: center;
     padding: 2rem 0;

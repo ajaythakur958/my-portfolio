@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
+// Theme Changer
 document.addEventListener('DOMContentLoaded', function() {
   const themeOptions = document.querySelectorAll('.theme-option');
   const html = document.documentElement;

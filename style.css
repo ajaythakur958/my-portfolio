@@ -58,16 +58,14 @@
   --skill-hover: #4a9bd1;
   --heading-color: #f5f5f5;
 }
-/* Theme Switcher UI */
+/* Minimal Floating Theme Switcher */
 .theme-switcher {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 100;
-  background: var(--card-bg);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: transparent;
+  padding: 0;
 }
 
 .theme-options {
@@ -76,34 +74,28 @@
 }
 
 .theme-option {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: transform 0.2s ease;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .theme-option:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .theme-option.active {
-  border-color: var(--accent);
+  border-color: white;
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
-/* Color Presets */
-.theme-option[data-theme="blue"] {
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #ecf0f1 100%);
-}
-
-.theme-option[data-theme="orange"] {
-  background: linear-gradient(135deg, #2c2c2c 0%, #dd6236 50%, #ede4d3 100%);
-}
-
-.theme-option[data-theme="dark"] {
-  background: linear-gradient(135deg, #1a1a1a 0%, #5dade2 50%, #2c2c2c 100%);
-}
+/* Pure Color Indicators */
+.theme-option[data-theme="blue"] { background: #3498db; }
+.theme-option[data-theme="orange"] { background: #dd6236; }
+.theme-option[data-theme="dark"] { background: #000000; }
 * {
     margin: 0;
     padding: 0;

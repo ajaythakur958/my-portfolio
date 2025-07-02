@@ -121,6 +121,7 @@ header {
     color: white;
     padding: 2rem 0;
     position: relative;
+    border-bottom: 3px solid var(--secondary);
 }
 
 .header-content {
@@ -213,7 +214,6 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    /* background-color: var(--highlight); */ /*orange theme*/
     background-color: white;
     bottom: 0;
     left: 0;

@@ -203,6 +203,8 @@ nav a {
 }
 
 nav a:hover {
+    /* color: var(--highlight); orange theme
+    background-color: rgba(221, 98, 54, 0.1); */
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -211,6 +213,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
+    /* background-color: var(--highlight); */ /*orange theme*/
     background-color: white;
     bottom: 0;
     left: 0;

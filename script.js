@@ -107,3 +107,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Visitor Tracking Function
+async function trackVisitor() {
+  try {
+    // Get IP & Location (using free API)
+    const ipResponse = await fetch('https://ipapi.co/json/');
+    const ipData = await ipResponse.json();
+
+    // Collect visitor data
+    const visitorData = {
+      pageUrl: window.location.href,
+      referrer: document.referrer || "direct",
+      deviceType: getDeviceType(),
+      browser: getBrowser(),
+      os: getOS(),
+      ip: ipData.ip,
+      city: ipData.city,
+      country: ipData.country_name,
+      timezone: ipData.timezone
+    };
+
+    // Send to Google Sheets
+    await sendToGoogleSheets(visitorData);
+  } catch (error) {
+    console.log("Error tracking visitor:", error);
+  }
+}
+
+// Helper: Detect Device (Mobile/Desktop)
+function getDeviceType() {
+  const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  return isMobile ? "Mobile" : "Desktop";
+}
+
+// Helper: Detect Browser (Chrome, Firefox, etc.)
+function getBrowser() {
+  const userAgent = navigator.userAgent;
+  if (userAgent.includes("Chrome")) return "Chrome";
+  if (userAgent.includes("Firefox")) return "Firefox";
+  if (userAgent.includes("Safari")) return "Safari";
+  return "Other";
+}
+
+// Helper: Detect OS (Windows, Mac, etc.)
+function getOS() {
+  const userAgent = navigator.userAgent;
+  if (userAgent.includes("Windows")) return "Windows";
+  if (userAgent.includes("Mac")) return "MacOS";
+  if (userAgent.includes("Linux")) return "Linux";
+  return "Other";
+}
+
+// Send Data to Google Sheets
+async function sendToGoogleSheets(data) {
+  const webAppUrl = "https://script.google.com/macros/s/AKfycbzVwIq-UZRb8qcLOJBOlzoejG2NTLGYpIhYuEAagTO-MkJfkWt92UfnrvsWmHuRwT8k/exec"; // Replace this!
+  try {
+    await fetch(webAppUrl, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    console.log("Visitor data sent!");
+  } catch (error) {
+    console.log("Failed to send data:", error);
+  }
+}
+
+// Run when page loads
+trackVisitor();

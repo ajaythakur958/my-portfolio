@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
 // Visitor Tracking Function
 async function trackVisitor() {
   try {
@@ -161,7 +162,7 @@ function getOS() {
 
 // Send Data to Google Sheets
 async function sendToGoogleSheets(data) {
-  const webAppUrl = "https://script.google.com/macros/s/AKfycbzVwIq-UZRb8qcLOJBOlzoejG2NTLGYpIhYuEAagTO-MkJfkWt92UfnrvsWmHuRwT8k/exec"; // Replace this!
+  const webAppUrl = "https://script.google.com/macros/s/AKfycbxiTWDSj8iFdNRL4SOQDSo0Qdy5cGnOCsjx1vsDOgQiFQj0crgZFpgqjvw2Gar9Xfd5SA/exec"; // Replace this!
   try {
     await fetch(webAppUrl, {
       method: "POST",

@@ -214,6 +214,11 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
+<<<<<<< HEAD
+    /* background-color: var(--highlight); */ /*orange theme*/
+=======
+    background-color: var(--highlight);
+>>>>>>> theme2
     background-color: white;
     bottom: 0;
     left: 0;

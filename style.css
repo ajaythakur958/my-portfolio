@@ -58,7 +58,7 @@
   --skill-hover: #4a9bd1;
   --heading-color: #f5f5f5;
 }
-/* Minimal Floating Theme Switcher */
+/* Floating Theme Switcher */
 .theme-switcher {
   position: fixed;
   bottom: 20px;
